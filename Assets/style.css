@@ -7,23 +7,27 @@
 }
 
 header {
-  padding: 30px;
+  padding: 10px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   background-color: #3f3f3f;
   color: #9d9ce7;
   display: flex;
-  flex-direction: column;
+
   justify-content: space-between;
 }
 
 header li {
+  white-space: nowrap;
   display: inline-block;
   margin-left: 20px;
 }
 
 ul {
   margin-right: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 a {
@@ -31,40 +35,85 @@ a {
   text-decoration: underline;
 }
 
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+header h1 {
+  position: relative;
+
+  white-space: nowrap;
+  color: rgb(54, 54, 54);
+  background-color: rgb(87, 110, 107);
+  border-radius: 0px 0px 15px 15px;
+  /* box-shadow: 8px 8px 18px rgba(141, 247, 255, 0.4); */
+  /* box-shadow: -2px 2px 27px 10px rgba(123, 255, 248, 0.7); */
+  border: 7px double #1c6ea4;
+  border-radius: 40px 18px 40px 10px;
+  /* text-shadow: 5px 5px 3px rgba(163, 181, 184, 0.3); */
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #49ff18,
+    0 0 30px #49ff18, 0 0 40px #49ff18, 0 0 55px #49ff18, 0 0 75px #49ff18;
+
+  padding: 13px;
 }
 
 #coolCaption {
-  position: absolute;
+  position: fixed;
   color: rgb(54, 54, 54);
-  background-color: rgb(146, 241, 241);
+  background-color: rgba(203, 252, 245, 0.7);
   border-radius: 15px;
   box-shadow: 20px 18px 12px rgb(63, 62, 62);
-  padding: 5px;
-  top: 200px;
+  text-shadow: 5px 5px 3px rgb(63, 62, 62, 0.3);
+  white-space: nowrap;
+
+  padding: 10px;
+  top: 10em;
+
   right: 100px;
-  font-size: 28px;
+  font-size: 22px;
   text-decoration: underline;
 }
-figure {
+
+.heroImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+#hero {
+}
+
+section h1::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 110px;
+  border: 2px solid rgb(101, 103, 129);
+  left: 15%;
+  top: 0%;
+}
+
+main {
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
-  align-content: center;
+}
+
+.sideCaption {
+  font-size: 3em;
+  color: rgb(41, 54, 77);
+}
+
+section {
+  position: relative;
+  left: 165px;
+  top: 2em;
+  right: auto;
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
 
-/* figure img {
-  margin-bottom: 25px;
-  max-width: 300px;
-  max-height: 300px;
-  display: block;
-} */
-figure img {
-  width: 200px; /* width of container */
-  height: 200px; /* height of container */
-  object-fit: cover;
-  object-position: 20% 10%; /* try 20px 10px */
+p {
+  display: flex;
+  overflow: visible;
+  margin-left: 70px;
+  padding-right: 270px;
 }
