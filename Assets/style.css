@@ -1,3 +1,6 @@
+:root {
+  --borderColor: #69fff2;
+}
 * {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -31,43 +34,21 @@ ul {
 }
 
 a {
-  color: #9d9ce7;
+  color: var(--borderColor);
   text-decoration: underline;
 }
 
 header h1 {
   position: relative;
-
   white-space: nowrap;
-  color: rgb(54, 54, 54);
-  background-color: rgb(87, 110, 107);
+  color: #3f3f3f;
+  background-color: #3f3f3f;
   border-radius: 0px 0px 15px 15px;
-  /* box-shadow: 8px 8px 18px rgba(141, 247, 255, 0.4); */
-  /* box-shadow: -2px 2px 27px 10px rgba(123, 255, 248, 0.7); */
-  border: 7px double #1c6ea4;
+  border: 5px double var(--borderColor);
   border-radius: 40px 18px 40px 10px;
-  /* text-shadow: 5px 5px 3px rgba(163, 181, 184, 0.3); */
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #49ff18,
-    0 0 30px #49ff18, 0 0 40px #49ff18, 0 0 55px #49ff18, 0 0 75px #49ff18;
-
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ffae18,
+    0 0 30px #ff8818, 0 0 40px #fbff18, 0 0 55px #fdff8d, 0 0 75px #fffff1;
   padding: 13px;
-}
-
-#coolCaption {
-  position: fixed;
-  color: rgb(54, 54, 54);
-  background-color: rgba(203, 252, 245, 0.7);
-  border-radius: 15px;
-  box-shadow: 20px 18px 12px rgb(63, 62, 62);
-  text-shadow: 5px 5px 3px rgb(63, 62, 62, 0.3);
-  white-space: nowrap;
-
-  padding: 10px;
-  top: 10em;
-
-  right: 100px;
-  font-size: 22px;
-  text-decoration: underline;
 }
 
 .heroImage {
@@ -76,44 +57,59 @@ header h1 {
   object-fit: cover;
 }
 
-#hero {
+#coolCaption {
+  position: fixed;
+  color: rgb(54, 54, 54);
+  background-color: rgba(126, 251, 255, 0.6);
+  border-radius: 15px;
+  box-shadow: 20px 18px 12px rgb(63, 62, 62);
+  text-shadow: 5px 5px 3px rgb(63, 62, 62, 0.3);
+  white-space: nowrap;
+  padding: 10px;
+  top: 10em;
+  right: 100px;
+  font-size: 22px;
+  text-decoration: underline;
 }
 
-section h1::after {
-  position: absolute;
-  content: "";
-  width: 0;
-  height: 110px;
-  border: 2px solid rgb(101, 103, 129);
-  left: 15%;
-  top: 0%;
-}
+/*-------------------------main section-----------------------------*/
 
-main {
+.mainContainer {
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-direction: column;
+  margin-top: 25px;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
-.sideCaption {
-  font-size: 3em;
-  color: rgb(41, 54, 77);
+.sideCaptionAboutMe {
+  margin-right: 50px;
 }
 
-section {
+.sideCaptionAboutMe h1 {
+  white-space: nowrap;
+  width: 150px;
+}
+
+.sideCaptionAboutMe h1::after {
   position: relative;
-  left: 165px;
-  top: 2em;
-  right: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  content: "";
+  display: block;
+  border: 2px solid rgb(101, 103, 129);
+  left: 175px;
+  width: 3px;
+  top: -40px;
+  height: 120px;
 }
 
-p {
-  display: flex;
-  overflow: visible;
-  margin-left: 70px;
-  padding-right: 270px;
+/*-----------------Media-------------------*/
+@media (max-width: 790px) {
+  /*changing flexbox to column*/
+  header {
+    flex-direction: column;
+  }
+  header h1 {
+    justify-content: center;
+    align-items: center;
+  }
 }
