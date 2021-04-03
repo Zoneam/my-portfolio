@@ -1,5 +1,6 @@
 :root {
   --borderColor: #69fff2;
+  --headerColor: #3f3f3f;
 }
 * {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -7,6 +8,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  background-color: rgb(230, 255, 254);
 }
 
 header {
@@ -16,7 +18,6 @@ header {
   background-color: #3f3f3f;
   color: #9d9ce7;
   display: flex;
-
   justify-content: space-between;
 }
 
@@ -27,6 +28,7 @@ header li {
 }
 
 ul {
+  background-color: var(--headerColor);
   margin-right: 50px;
   display: flex;
   align-items: center;
@@ -35,6 +37,7 @@ ul {
 
 a {
   color: var(--borderColor);
+  background-color: var(--headerColor);
   text-decoration: underline;
 }
 
@@ -46,8 +49,9 @@ header h1 {
   border-radius: 0px 0px 15px 15px;
   border: 5px double var(--borderColor);
   border-radius: 40px 18px 40px 10px;
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ffae18,
-    0 0 30px #ff8818, 0 0 40px #fbff18, 0 0 55px #fdff8d, 0 0 75px #fffff1;
+  text-shadow: 0 0 5px #fff, 0 0 5px rgb(195, 246, 248),
+    0 0 15px rgb(142, 249, 255), 0 0 20px #3bf0f0, 0 0 30px #2420f1,
+    0 0 40px #0a9abe, 0 0 55px #68a5df, 0 0 75px #e9e9c8;
   padding: 13px;
 }
 
@@ -57,8 +61,12 @@ header h1 {
   object-fit: cover;
 }
 
+#hero {
+  position: relative;
+}
+
 #coolCaption {
-  position: fixed;
+  position: absolute;
   color: rgb(54, 54, 54);
   background-color: rgba(126, 251, 255, 0.6);
   border-radius: 15px;
@@ -66,7 +74,7 @@ header h1 {
   text-shadow: 5px 5px 3px rgb(63, 62, 62, 0.3);
   white-space: nowrap;
   padding: 10px;
-  top: 10em;
+  top: 5em;
   right: 100px;
   font-size: 22px;
   text-decoration: underline;
@@ -75,23 +83,31 @@ header h1 {
 /*-------------------------main section-----------------------------*/
 
 .mainContainer {
-  display: flex;
-  justify-content: center;
+  position: relative;
   margin-top: 25px;
   margin-left: 15%;
   margin-right: 15%;
 }
 
-.sideCaptionAboutMe {
-  margin-right: 50px;
+.paragraph-about-me-container {
+  display: inline-block;
+  position: relative;
+  left: 200px;
+  margin-right: 20%;
+  top: -160px;
 }
 
-.sideCaptionAboutMe h1 {
-  white-space: nowrap;
+.paragraphAboutMe {
+  display: inline;
+}
+
+.mainContainer h1 {
+  /* white-space: nowrap; */
   width: 150px;
+  display: inline;
 }
 
-.sideCaptionAboutMe h1::after {
+.mainContainer h1::after {
   position: relative;
   content: "";
   display: block;
@@ -102,6 +118,56 @@ header h1 {
   height: 120px;
 }
 
+/*------------------Pictures Section--------------------------*/
+
+.pictureFlex {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  flex-wrap: wrap;
+  top: -170px;
+  left: 190px;
+}
+
+.my-work-image-hero {
+  flex: 0 0 100%;
+  padding: 10px;
+  width: 200px;
+}
+.my-work-image {
+  flex: 0 0 35%;
+  padding: 10px;
+  width: 200px;
+}
+
+.my-work-image-hero img {
+  width: 1000px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.my-work-image img {
+  margin: 10px;
+  height: 300px;
+  width: 100%;
+  width: 100z5;
+  border: 5px solid rgb(58, 37, 241);
+  object-fit: cover;
+}
+
+.image-text {
+  width: fit-content;
+}
+
+.image-text h3,
+h5 {
+  top: -80px;
+  left: 10px;
+  display: block;
+  background-color: rgb(0, 204, 255);
+  position: relative;
+}
+
 /*-----------------Media-------------------*/
 @media (max-width: 790px) {
   /*changing flexbox to column*/
@@ -109,6 +175,7 @@ header h1 {
     flex-direction: column;
   }
   header h1 {
+    text-align: center;
     justify-content: center;
     align-items: center;
   }
