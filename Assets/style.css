@@ -85,7 +85,7 @@ header h1 {
 .mainContainer {
   position: relative;
   margin-top: 25px;
-  margin-left: 15%;
+  margin-left: 5%;
   margin-right: 15%;
 }
 
@@ -123,7 +123,7 @@ header h1 {
 .pictureFlex {
   display: flex;
   position: relative;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
   top: -170px;
   left: 190px;
@@ -131,46 +131,45 @@ header h1 {
 
 .my-work-image-hero {
   flex: 0 0 100%;
-  padding: 10px;
-  width: 200px;
 }
 .my-work-image {
-  flex: 0 0 35%;
-  padding: 10px;
+  flex: 0 0 40%;
+  padding: 5px;
   width: 200px;
+  position: relative;
 }
 
 .my-work-image-hero img {
-  width: 1000px;
-  height: 300px;
-  object-fit: cover;
-}
-
-.my-work-image img {
-  margin: 10px;
-  height: 300px;
   width: 100%;
-  width: 100z5;
+  height: 300px;
+  width: 80%;
   border: 5px solid rgb(58, 37, 241);
   object-fit: cover;
 }
 
+.my-work-image img {
+  height: 160px;
+  width: 100%;
+  border: 5px solid rgb(58, 37, 241);
+  object-fit: cover;
+  position: relative;
+}
+
 .image-text {
   width: fit-content;
+  left: 15px;
+  position: absolute;
 }
 
 .image-text h3,
 h5 {
-  top: -80px;
-  left: 10px;
-  display: block;
-  background-color: rgb(0, 204, 255);
   position: relative;
+  top: -55px;
+  background-color: rgb(0, 204, 255);
 }
 
 /*-----------------Media-------------------*/
 @media (max-width: 790px) {
-  /*changing flexbox to column*/
   header {
     flex-direction: column;
   }
