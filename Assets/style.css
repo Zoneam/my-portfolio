@@ -122,7 +122,7 @@ header h1 {
 .pictureFlex {
   display: flex;
   position: relative;
-  justify-content: flex-start;
+  justify-content: space-between;
   flex-wrap: wrap;
   top: -40px;
   margin-left: 200px;
@@ -132,9 +132,10 @@ header h1 {
   flex: 0 0 100%;
 }
 .my-work-image {
-  flex: 0 0 50%;
-  padding: 5px;
+  flex: 0 0 49%;
+  /* padding: 5px; */
   width: 200px;
+  margin-top: 10px;
   position: relative;
 }
 
@@ -155,35 +156,37 @@ header h1 {
 }
 
 .image-text {
+  background-color: #6be9ff;
   width: fit-content;
   left: 15px;
   position: absolute;
+  top: 100px;
+  border-radius: 20px 3px 20px 3px;
+  padding: 5px;
 }
 
 .image-text h3,
 h5 {
   position: relative;
-  top: -55px;
-  background-color: rgb(0, 204, 255);
+  background-color: rgba(126, 251, 255, 0);
   padding: 2px;
 }
 /*---------------Footer*/
 .mainContainer-footer {
   margin-bottom: 100px;
-  display: flex;
-  justify-content: flex-start;
 }
 .mainContainer-footer h1 {
   margin-left: 5%;
   white-space: nowrap;
+  display: inline;
 }
 
 footer a {
-  display: inline-block;
   white-space: nowrap;
   background-color: rgb(230, 255, 254);
   color: #3f3f3f;
   font-size: 1.2em;
+  font-weight: bolder;
 }
 
 footer li {
@@ -195,6 +198,9 @@ footer ul {
   background-color: rgb(230, 255, 254);
   align-items: center;
   display: flex;
+}
+.contact-wrapper {
+  display: inline;
 }
 
 .header-nav a:hover {
@@ -212,6 +218,15 @@ footer ul {
   border-color: rgb(253, 145, 13);
 }
 
+.my-work-image:hover .image-text,
+.my-work-image-hero:hover .image-text {
+  transition: 0.5s ease;
+  border-radius: 3px 20px 3px 20px;
+  background-color: rgb(253, 145, 13);
+  font-size: 1.1em;
+  box-shadow: 20px 18px 12px rgb(63, 62, 62);
+}
+
 /*-----------------Media-------------------*/
 @media (max-width: 790px) {
   header {
@@ -221,5 +236,9 @@ footer ul {
     text-align: center;
     justify-content: center;
     align-items: center;
+  }
+
+  .image-text {
+    display: none;
   }
 }
