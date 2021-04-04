@@ -59,6 +59,7 @@ header h1 {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  border: 5px double var(--borderColor);
 }
 
 #hero {
@@ -78,11 +79,13 @@ header h1 {
   right: 100px;
   font-size: 22px;
   text-decoration: underline;
+  user-select: none;
 }
 
 /*-------------------------main section-----------------------------*/
 
-.mainContainer {
+.mainContainer,
+.mainContainer-footer {
   position: relative;
   margin-top: 25px;
   margin-left: 5%;
@@ -97,25 +100,11 @@ header h1 {
   top: -40px;
 }
 
-.paragraphAboutMe {
-  display: inline;
-}
-
-.mainContainer h1 {
-  /* white-space: nowrap; */
+.mainContainer h1,
+#contact-me {
   width: 150px;
   display: inline;
 }
-
-/* .mainContainer h1::after {
-  position: relative;
-  content: "";
-  display: inline;
-  border: 2px solid rgb(101, 103, 129);
-  left: 10px;
-  width: 3px;
-  height: 120px;
-} */
 
 /*------------------Pictures Section--------------------------*/
 
@@ -130,6 +119,7 @@ header h1 {
 
 .my-work-image-hero {
   flex: 0 0 100%;
+  position: relative;
 }
 .my-work-image {
   flex: 0 0 49%;
@@ -142,50 +132,54 @@ header h1 {
 .my-work-image-hero img {
   width: 100%;
   height: 300px;
-  border: 5px solid rgb(58, 37, 241);
+  border: 5px solid var(--borderColor);
   object-fit: cover;
   position: relative;
+  opacity: 0.7;
 }
 
 .my-work-image img {
   height: 160px;
   width: 100%;
-  border: 5px solid rgb(58, 37, 241);
+  border: 5px solid var(--borderColor);
   object-fit: cover;
   position: relative;
+  opacity: 0.7;
 }
 
 .image-text {
-  background-color: #6be9ff;
+  background: rgb(63, 94, 251);
+  background: radial-gradient(
+    circle,
+    rgb(255, 255, 255) 0%,
+    rgba(70, 252, 241, 1) 100%
+  );
   width: fit-content;
   left: 15px;
   position: absolute;
-  top: 100px;
+  bottom: 12px;
   border-radius: 20px 3px 20px 3px;
   padding: 5px;
 }
 
 .image-text h3,
 h5 {
+  user-select: none;
   position: relative;
   background-color: rgba(126, 251, 255, 0);
   padding: 2px;
 }
-/*---------------Footer*/
+/*---------------Footer--------------*/
+
 .mainContainer-footer {
-  margin-bottom: 100px;
-}
-.mainContainer-footer h1 {
-  margin-left: 5%;
-  white-space: nowrap;
-  display: inline;
+  height: 230px;
 }
 
 footer a {
   white-space: nowrap;
   background-color: rgb(230, 255, 254);
   color: #3f3f3f;
-  font-size: 1.2em;
+  font-size: 1.5em;
   font-weight: bolder;
 }
 
@@ -196,11 +190,13 @@ footer li {
 
 footer ul {
   background-color: rgb(230, 255, 254);
-  align-items: center;
   display: flex;
+  justify-content: space-between;
 }
 .contact-wrapper {
-  display: inline;
+  width: 80%;
+  height: 300px;
+  margin-left: 170px;
 }
 
 .header-nav a:hover {
@@ -212,7 +208,7 @@ footer ul {
 .my-work-image:hover img,
 .my-work-image-hero:hover img {
   transition: 0.5s ease;
-  opacity: 0.5;
+  opacity: 1;
   cursor: -webkit-grab;
   border-radius: 60px 18px 60px 10px;
   border-color: rgb(253, 145, 13);
@@ -221,10 +217,47 @@ footer ul {
 .my-work-image:hover .image-text,
 .my-work-image-hero:hover .image-text {
   transition: 0.5s ease;
+  left: 60px;
+  text-shadow: 5px 5px 3px rgb(63, 62, 62, 0.3);
   border-radius: 3px 20px 3px 20px;
-  background-color: rgb(253, 145, 13);
+
+  background: rgb(255, 128, 0);
+  background: linear-gradient(
+    90deg,
+    rgb(255, 141, 34) 0%,
+    rgb(255, 220, 78) 47%,
+    rgba(255, 255, 255, 0.664) 100%
+  );
   font-size: 1.1em;
-  box-shadow: 20px 18px 12px rgb(63, 62, 62);
+  box-shadow: 20px 18px 12px rgb(26, 26, 26);
+}
+
+/* -------------------------*/
+#about-me-h1::after {
+  position: absolute;
+  content: "";
+  height: 79px;
+  left: 175px;
+  display: inline;
+  border: 2px solid rgb(101, 103, 129);
+}
+
+#portfolio-h1::after {
+  position: absolute;
+  content: "";
+  height: 85%;
+  left: 175px;
+  display: inline;
+  border: 2px solid rgb(101, 103, 129);
+}
+
+#contact-me::after {
+  position: absolute;
+  content: "";
+  height: 120px;
+  left: 175px;
+  display: inline;
+  border: 2px solid rgb(101, 103, 129);
 }
 
 /*-----------------Media-------------------*/
@@ -240,5 +273,9 @@ footer ul {
 
   .image-text {
     display: none;
+  }
+
+  footer ul {
+    flex-direction: column;
   }
 }
