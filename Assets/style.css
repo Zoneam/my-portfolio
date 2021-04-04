@@ -16,6 +16,7 @@ header {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   background-color: #3f3f3f;
+
   color: #9d9ce7;
   display: flex;
   justify-content: space-between;
@@ -46,12 +47,12 @@ header h1 {
   white-space: nowrap;
   color: #3f3f3f;
   background-color: #3f3f3f;
-
   border: 5px double var(--borderColor);
   border-radius: 40px 18px 40px 10px;
   text-shadow: 0 0 5px #fff, 0 0 5px rgb(195, 246, 248),
     0 0 15px rgb(142, 249, 255), 0 0 20px #3bf0f0, 0 0 30px #2420f1,
     0 0 40px #0a9abe, 0 0 55px #68a5df, 0 0 75px #e9e9c8;
+
   padding: 13px;
 }
 
@@ -71,6 +72,7 @@ header h1 {
   color: rgb(54, 54, 54);
   background-color: rgba(126, 251, 255, 0.6);
   border-radius: 15px;
+  animation: cool-caption-anim 1s infinite alternate;
   box-shadow: 20px 18px 12px rgb(63, 62, 62);
   text-shadow: 5px 5px 3px rgb(63, 62, 62, 0.3);
   white-space: nowrap;
@@ -172,7 +174,7 @@ h5 {
 /*---------------Footer--------------*/
 
 .mainContainer-footer {
-  height: 230px;
+  height: 150px;
 }
 
 footer a {
@@ -195,7 +197,7 @@ footer ul {
 }
 .contact-wrapper {
   width: 80%;
-  height: 300px;
+
   margin-left: 170px;
 }
 
@@ -277,5 +279,23 @@ footer ul {
 
   footer ul {
     flex-direction: column;
+  }
+}
+
+@keyframes cool-caption-anim {
+  0% {
+    top: 0px;
+  }
+  10% {
+    top: 10px;
+  }
+  12% {
+    top: 15px;
+  }
+  20% {
+    top: 18px;
+  }
+  100% {
+    top: 0px;
   }
 }
