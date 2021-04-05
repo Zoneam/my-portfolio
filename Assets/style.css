@@ -263,6 +263,7 @@ footer ul {
 
 /*-----------------Media-------------------*/
 @media (max-width: 790px) {
+  /*changing direction of flexbox*/
   header {
     flex-direction: column;
   }
@@ -296,8 +297,10 @@ footer ul {
   .header-nav {
     font-size: 0.8em;
   }
-  #about-me-h1,
-  #portfolio-h1,
+
+  /*-----Removing vertical lines next to headers-----*/
+  #about-me-h1::after,
+  #portfolio-h1::after,
   #contact-me::after {
     content: none;
   }
@@ -309,6 +312,12 @@ footer ul {
   }
   .my-work-image img {
     height: 55px;
+  }
+  #coolCaption {
+    right: 65px;
+  }
+  footer li {
+    margin-bottom: 10px;
   }
 }
 /*--------Cool caption bump effect keyframes--------*/

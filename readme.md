@@ -55,7 +55,7 @@ THEN I am presented with a responsive layout that adapts to my viewport
     [x] With after selector added line next to each section header
     [x] Added media query, changing header nav and footer contacts to column, hideing image texts once resized
     [x] Added keyframes for cool caption bump effect
-    [x] Added media query to remove after elements (Vertical lines)
+    [x] Added media query to remove after elements (Vertic#al lines)
 
 ---
 
