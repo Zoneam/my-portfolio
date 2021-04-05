@@ -16,7 +16,6 @@ header {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   background-color: #3f3f3f;
-
   color: #9d9ce7;
   display: flex;
   justify-content: space-between;
@@ -125,8 +124,7 @@ header h1 {
 }
 .my-work-image {
   flex: 0 0 49%;
-  /* padding: 5px; */
-  width: 200px;
+
   margin-top: 10px;
   position: relative;
 }
@@ -150,11 +148,9 @@ header h1 {
 }
 
 .image-text {
-  background: rgb(63, 94, 251);
   background: radial-gradient(
-    circle,
-    rgb(255, 255, 255) 0%,
-    rgba(70, 252, 241, 1) 100%
+    rgb(255, 255, 255) 10%,
+    rgba(70, 252, 241, 0.6) 70%
   );
   width: fit-content;
   left: 15px;
@@ -187,18 +183,19 @@ footer a {
 
 footer li {
   display: inline;
-  margin-left: 4%;
+  margin-left: 20%;
+  text-decoration: underline;
 }
-
+/*flexbox for footer contact section*/
 footer ul {
   background-color: rgb(230, 255, 254);
-  display: flex;
-  justify-content: space-between;
+  display: inline-flex;
+  margin-left: 50px;
 }
 .contact-wrapper {
-  width: 80%;
-
-  margin-left: 170px;
+  margin-left: 5%;
+  display: inline-flex;
+  justify-content: space-between;
 }
 
 .header-nav a:hover {
@@ -207,6 +204,8 @@ footer ul {
   color: #f16d20;
 }
 
+/*-------on hover selector----------*/
+/*transition for portfolio image border radius changed cursor to grab cursor and bringing back (focusing) opacity on selected image*/
 .my-work-image:hover img,
 .my-work-image-hero:hover img {
   transition: 0.5s ease;
@@ -234,11 +233,11 @@ footer ul {
   box-shadow: 20px 18px 12px rgb(26, 26, 26);
 }
 
-/* -------------------------*/
+/* ----------after selector adding lign next to each section header---------------*/
 #about-me-h1::after {
   position: absolute;
   content: "";
-  height: 79px;
+  height: 75%;
   left: 175px;
   display: inline;
   border: 2px solid rgb(101, 103, 129);
@@ -281,7 +280,7 @@ footer ul {
     flex-direction: column;
   }
 }
-
+/*--------Cool caption bump effect keyframes--------*/
 @keyframes cool-caption-anim {
   0% {
     top: 0px;
