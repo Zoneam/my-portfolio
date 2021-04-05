@@ -285,6 +285,31 @@ footer ul {
   #contact-me {
     font-size: 1em;
   }
+
+  .paragraph-about-me-container {
+    left: 88px;
+    margin-right: 25%;
+  }
+  .pictureFlex {
+    margin-left: 97px;
+  }
+  .header-nav {
+    font-size: 0.8em;
+  }
+  #about-me-h1,
+  #portfolio-h1,
+  #contact-me::after {
+    content: none;
+  }
+  footer ul {
+    margin-left: -20px;
+  }
+  .my-work-image-hero img {
+    height: 100px;
+  }
+  .my-work-image img {
+    height: 55px;
+  }
 }
 /*--------Cool caption bump effect keyframes--------*/
 @keyframes cool-caption-anim {
