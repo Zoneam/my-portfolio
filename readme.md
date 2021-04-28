@@ -2,7 +2,7 @@
 
 ---
 
----
+## Deployed https://zoneam.github.io/my-portfolio/
 
 ## Requirements necessary to develop a portfolio that satisfies a typical hiring manager’s needs:
 
