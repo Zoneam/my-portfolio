@@ -297,8 +297,17 @@ footer ul {
     align-items: center;
   }
 
-  .image-text {
+
+  .image-text h5 {
     display: none;
+  }
+
+  .image-text h3 {
+    font-size: 0.7em;
+  }
+
+  #coolCaption {
+    font-size: 0.5em;
   }
 
   footer ul {
@@ -354,6 +363,34 @@ footer ul {
   footer li {
     margin-bottom: 10px;
   }
+
+  #hero {
+    height: 65px;
+  }
+
+  .heroImage {
+    height: 65px;
+  }
+
+  .paragraph-about-me-container {
+    top: -18px;
+  }
+
+  .mainContainer,
+  .mainContainer-footer {
+    margin-top: 9px;
+  }
+
+  .pictureFlex {
+    display: block;
+    top: -15px;
+    margin-left: 87px;
+  }
+
+  .my-work-image img {
+    height: 100px;
+  }
+
 }
 
 /*--------Cool caption bump effect keyframes--------*/
