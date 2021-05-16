@@ -206,7 +206,7 @@ h5 {
 /*---------------Footer--------------*/
 
 .mainContainer-footer {
-  height: 150px;
+  height: 80px;
 }
 
 footer a {
@@ -344,6 +344,7 @@ footer ul {
   }
 
   .contact-wrapper {
+    display: block;
     margin-left: 0px;
   }
 
@@ -359,7 +360,9 @@ footer ul {
 
 
   footer ul {
+    display: flex;
     padding-left: 0rem;
+    justify-content: space-between;
   }
 
   #about-me-h1,
