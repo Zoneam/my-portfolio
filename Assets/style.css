@@ -143,9 +143,6 @@ header h1 {
   }
 }
 
-
-
-
 /*------------------Pictures Section--------------------------*/
 
 .pictureFlex {
@@ -327,9 +324,6 @@ footer ul {
   display: inline;
   border: 2px solid rgb(101, 103, 129);
 }
-
-/*Animate text*/
-
 
 /*-----------------Media-------------------*/
 @media (max-width: 790px) {
