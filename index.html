@@ -5,13 +5,16 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   <link rel="stylesheet" href="./Assets/style.css" />
   <title>Hayk Mnatsakanyan Portfolio</title>
 </head>
 
 <body>
   <!--header with nav bar-->
-  <header>
+  <!-- <header>
     <h1>Hayk Mnatsakanyan</h1>
     <ul class="header-nav">
       <li><a href="#about-me-h1">About Me</a></li>
@@ -19,8 +22,38 @@
       <li><a href="#contact-me">Contact Me</a></li>
       <li><a href="./Assets/Hayk Mnatsakanyan Resume.pdf" target="_blank">My Resume</a></li>
     </ul>
-  </header>
+  </header> -->
 
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Hayk Mnatsakanyan</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02"
+        aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#about-me-h1">About Me
+              <span class="visually-hidden">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#surf-report">My Work</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact-me">Contact Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Assets/Hayk Mnatsakanyan Resume.pdf" target="_blank">My Resume</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--                                                    -->
   <div id="hero">
     <!-- <img src="./Assets/hero-image.jpg" alt="Colorful Squares Background" class="heroImage" /> -->
     <h2 id="coolCaption"><span>{ 1N73LL1G3NC3 15 7H3 4B1L17Y 70 4D4P7 70 CH4NG3 }</span></h2>
@@ -29,9 +62,9 @@
 
   <main>
     <div class="mainContainer">
-      <h1 id="about-me-h1">About Me</h1>
+      <h2 id="about-me-h1">About Me</h2>
       <div class="paragraph-about-me-container">
-        <!--Paragraph about me-->
+
         <p class="paragraphAboutMe">
           Educated as an engineer, a trilingual graphic designer and photographer turned into a self-taught businessman
           and entrepreneur. Post-baccalaureate education from UC Davis in full stack web development, including
@@ -47,8 +80,12 @@
       </div>
     </div>
 
+
+
+
+
     <div class="mainContainer">
-      <h1 id="portfolio-h1">Portfolio</h1>
+      <h2 id="portfolio-h1">Portfolio</h2>
       <div class="pictureFlex">
         <div class="my-work-image-hero" id="surf-report">
           <a href="https://zoneam.github.io/Marvelizer/" target="_blank"><img src="./Assets/Marvelizer-cap2.jpg"
@@ -97,21 +134,49 @@
   <!--Footer-->
   <footer>
     <div class="mainContainer-footer">
-      <h1 id="contact-me">Contact</h1>
+      <h2 id="contact-me">Contact</h2>
       <div class="contact-wrapper">
         <ul>
-          <li><a>(916)833-9297</a></li>
-          <li><a href="mailto:zoneam@gmail.com">Email</a></li>
+          <li><a href="tel:9168339297"><img class="icons" src="./Assets/icons/Phone.png" alt="facebook icon"></a></li>
+          <li><a href="mailto:zoneam@gmail.com"><img class="icons" src="./Assets/icons/Mail.png"
+                alt="facebook icon"></a></li>
           <li>
-            <a href="https://github.com/Zoneam" target="_blank">Github</a>
+            <a href="https://github.com/Zoneam" target="_blank"><img class="icons" src="./Assets/icons/github.png"
+                alt="facebook icon"></a>
           </li>
           <li>
-            <a href="https://www.facebook.com/Zoneam" target="_blank">facebook</a>
+            <a href="https://www.facebook.com/Zoneam" target="_blank"><img class="icons" src="./Assets/icons/fb.png"
+                alt="facebook icon"></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/hayk-mnatsakanyan-34041096/" target="_blank"><img class="icons"
+                src="./Assets/icons/In.png" alt="LinkedIn icon"></a>
           </li>
         </ul>
       </div>
     </div>
   </footer>
+
+  <!-- <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+
+  </ul> -->
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+  </script>
 </body>
 
 </html>

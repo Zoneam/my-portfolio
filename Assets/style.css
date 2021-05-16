@@ -42,7 +42,7 @@ header li {
   text-decoration: underline;
 }
 
-header h1 {
+.navbar-brand {
   position: relative;
   white-space: nowrap;
   color: #3f3f3f;
@@ -211,7 +211,7 @@ h5 {
 
 footer a {
   white-space: nowrap;
-  /* background-color: rgb(230, 255, 254); */
+
   color: #3f3f3f;
   font-size: 1.5em;
   font-weight: bolder;
@@ -223,9 +223,9 @@ footer li {
   text-decoration: underline;
 }
 
-/*flexbox for footer contact section*/
+
 footer ul {
-  /* background-color: rgb(230, 255, 254); */
+
   display: inline-flex;
   margin-left: 50px;
 }
@@ -325,6 +325,10 @@ footer ul {
   border: 2px solid rgb(101, 103, 129);
 }
 
+.icons {
+  width: 60px;
+}
+
 /*-----------------Media-------------------*/
 @media (max-width: 790px) {
 
@@ -339,6 +343,10 @@ footer ul {
     align-items: center;
   }
 
+  .contact-wrapper {
+    margin-left: 0px;
+  }
+
 
   .image-text h5 {
     display: none;
@@ -351,18 +359,21 @@ footer ul {
 
 
   footer ul {
-    flex-direction: column;
+    padding-left: 0rem;
   }
 
   #about-me-h1,
   #portfolio-h1,
   #contact-me {
+    display: none;
     font-size: 1em;
   }
 
   .paragraph-about-me-container {
-    left: 88px;
-    margin-right: 25%;
+
+    margin-right: 0px;
+    top: 0px;
+    left: 0px;
   }
 
   .pictureFlex {
@@ -374,7 +385,7 @@ footer ul {
   }
 
   .paragraphAboutMe {
-    font-size: 0.3em;
+    font-size: 0.4em;
   }
 
   /*-----Removing vertical lines next to headers-----*/
@@ -385,7 +396,7 @@ footer ul {
   }
 
   footer ul {
-    margin-left: -20px;
+    margin-left: 0px;
   }
 
   .my-work-image-hero img {
@@ -403,7 +414,7 @@ footer ul {
   }
 
   footer li {
-    margin-bottom: 10px;
+    margin-left: 2%;
   }
 
   #hero {
@@ -414,9 +425,7 @@ footer ul {
     height: 65px;
   }
 
-  .paragraph-about-me-container {
-    top: -18px;
-  }
+
 
   .mainContainer,
   .mainContainer-footer {
@@ -425,8 +434,8 @@ footer ul {
 
   .pictureFlex {
     display: block;
-    top: -15px;
-    margin-left: 87px;
+    top: 0px;
+    margin-left: 0px;
   }
 
   .my-work-image img {
