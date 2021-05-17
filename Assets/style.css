@@ -22,6 +22,14 @@ header {
   justify-content: space-between;
 }
 
+h5 {
+  font-size: 15px;
+}
+
+h6 {
+  font-size: 10px;
+}
+
 header li {
   white-space: nowrap;
   display: inline-block;
@@ -104,6 +112,7 @@ header li {
   margin-top: 25px;
   margin-left: 5%;
   margin-right: 5%;
+  width: 1000px;
 }
 
 .paragraph-about-me-container {
@@ -114,7 +123,13 @@ header li {
   top: -40px;
 }
 
-.mainContainer h1,
+.paragraphAboutMe {
+  text-align: justify;
+  border: 5px solid #3c3c3c3b;
+  padding: 5px;
+}
+
+.mainContainer h2,
 #contact-me {
   width: 150px;
   display: inline;
@@ -179,7 +194,7 @@ header li {
   height: 160px;
   width: 100%;
   border: 5px solid var(--borderColor);
-  object-fit: cover;
+  object-fit: fill;
   position: relative;
   opacity: 0.7;
 }
@@ -268,6 +283,10 @@ footer ul {
   /* border-color: rgb(253, 145, 13); */
 }
 
+h2 {
+  color: #3c3c3c94;
+}
+
 .my-work-image:hover .image-text,
 .my-work-image-hero:hover .image-text {
   transition: 0.5s ease;
@@ -297,6 +316,17 @@ footer ul {
 
 }
 
+.about-me-span {
+  display: none;
+  font-size: 27px;
+  font-weight: 800;
+  text-decoration-line: underline;
+}
+
+#portfolio-span {
+  display: none;
+}
+
 /* ----------after selector adding lign next to each section header---------------*/
 #about-me-h1::after {
   position: absolute;
@@ -316,6 +346,10 @@ footer ul {
   border: 2px solid rgb(101, 103, 129);
 }
 
+#contact-span {
+  display: none;
+}
+
 #contact-me::after {
   position: absolute;
   content: "";
@@ -329,8 +363,14 @@ footer ul {
   width: 60px;
 }
 
+@media (max-width: 865px) {
+  #coolCaption {
+    font-size: 0.8em;
+  }
+}
+
 /*-----------------Media-------------------*/
-@media (max-width: 790px) {
+@media (max-width: 530px) {
 
   /*changing direction of flexbox*/
   header {
@@ -343,18 +383,38 @@ footer ul {
     align-items: center;
   }
 
+  .icons {
+    width: 50px;
+  }
+
   .contact-wrapper {
     display: block;
     margin-left: 0px;
   }
 
+  .mainContainer-footer {
 
-  .image-text h5 {
+    border: 5px solid #3c3c3c3b;
+    padding: 5px;
+    height: 130px;
+  }
+
+
+  .image-text h6 {
     display: none;
   }
 
-  .image-text h3 {
+  .image-text h5 {
     font-size: 0.7em;
+    margin: 0px;
+  }
+
+  #portfolio-span {
+    display: inline-block;
+    color: #3c3c3c94;
+    font-size: 27px;
+    font-weight: 800;
+    text-decoration-line: underline;
   }
 
 
@@ -363,6 +423,11 @@ footer ul {
     display: flex;
     padding-left: 0rem;
     justify-content: space-between;
+  }
+
+  .about-me-span {
+    display: inline-block;
+    color: #3c3c3c94
   }
 
   #about-me-h1,
@@ -381,14 +446,27 @@ footer ul {
 
   .pictureFlex {
     margin-left: 97px;
+    border: 5px solid #3c3c3c3b;
+    padding: 5px;
   }
+
+
 
   .header-nav {
     font-size: 0.8em;
   }
 
   .paragraphAboutMe {
-    font-size: 0.4em;
+    font-size: 0.7em;
+  }
+
+  #contact-span {
+    display: inline-block;
+    color: #3c3c3c94;
+    font-size: 27px;
+    font-weight: 800;
+    text-decoration-line: underline;
+    margin-bottom: 5px;
   }
 
   /*-----Removing vertical lines next to headers-----*/
@@ -433,6 +511,8 @@ footer ul {
   .mainContainer,
   .mainContainer-footer {
     margin-top: 9px;
+    width: 90%;
+
   }
 
   .pictureFlex {
