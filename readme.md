@@ -59,4 +59,4 @@ THEN I am presented with a responsive layout that adapts to my viewport
 
 ---
 
-![My Portfolio Page Screenshot](.\Assets\screencapture.png)
+![My Portfolio Page Screenshot](./Assets/screencapture.png)
